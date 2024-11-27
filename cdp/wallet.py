@@ -666,9 +666,9 @@ class Wallet:
         if self._seed == "":
             return None
 
-        seed = bytes.fromhex(self._seed)
-
         self._validate_seed(seed)
+
+        seed = bytes.fromhex(self._seed)
 
         return Bip32Slip10Secp256k1.FromSeed(seed)
 
