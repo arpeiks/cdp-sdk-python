@@ -666,7 +666,7 @@ class Wallet:
         if self._seed == "":
             return None
 
-        self._validate_seed(seed)
+        self._validate_seed(self._seed)
 
         seed = bytes.fromhex(self._seed)
 
